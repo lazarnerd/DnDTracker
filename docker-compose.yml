@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  backend:
+    build: backend
+
+    volumes:
+      - ..:/workspaces:cached
+
+    command: sleep infinity
+  frontend:
+    build: frontend
+
+    volumes:
+      - ..:/workspaces:cached
+
+    command: sleep infinity
+
+  db:
+    image: postgres:latest
+    restart: unless-stopped
+    volumes:
+      - db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
+      POSTGRES_PASSWORD: postgres
+volumes:
+  db:

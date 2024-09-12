@@ -1,12 +1,12 @@
 [tool.poetry]
-name = "dndtracker"
+name = "dnd-tracker"
 version = "0.1.0"
 description = ""
 authors = ["Daniel Neururer <danielxiv64@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.10"
 
 
 [build-system]
